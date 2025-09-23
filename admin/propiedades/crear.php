@@ -102,8 +102,8 @@
 
 
         //Insertar en la base de datos
-        $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio',
-        '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedores_id' ) ";
+        $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) 
+        VALUES ( '$titulo', '$precio', '$nombreImagen' ,'$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedores_id' ) ";
 
         //echo $query;
 
@@ -111,7 +111,7 @@
 
             if($resultado) {
                 // Redireccionar al usuario
-                header('Location: /admin');
+                header('Location: /admin?resultado=1');
             }
         }
     }
